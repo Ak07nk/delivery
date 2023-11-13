@@ -22,7 +22,7 @@ const Items = () => {
 
   const getItems = () => {
     firestore()
-      .collection('items')
+      .collection('items') // need to add admin dynmaically
       .get()
       .then(querySnapshot => {
         let tempData = [];
