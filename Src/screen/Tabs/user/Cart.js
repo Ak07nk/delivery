@@ -19,7 +19,7 @@ const Cart = ({navigation}) => {
     getCartItems();
   }, [isFocused]);
   const getCartItems = async () => {
-    userId = await AsyncStorage.getItem('USERID');
+    userId = await AsyncStorage.getItem('USERID'); /// HI Nav
     const user = await firestore().collection('users').doc(userId).get();
     setCartList(user._data.cart);
   };
